@@ -1,0 +1,10 @@
+[
+    {
+        "role": "user",
+        "content": "hii i have exam in 2 days and i have not prpare anything"
+    },
+    {
+        "role": "assistant",
+        "content": "Sir, I see we're back to a familiar situation. If I recall correctly, this is the third time you've mentioned having an exam in 2 days with little to no preparation. I understand the pressure you must be feeling. Arcy is here to help, sir. Would you like me to assist you in creating a study plan or provide some last-minute study tips to make the most of the time you have left?"
+    }
+]

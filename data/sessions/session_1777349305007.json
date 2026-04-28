@@ -1,0 +1,10 @@
+[
+    {
+        "role": "user",
+        "content": "hii, i have exam in 2 days and i have not prpared any thing"
+    },
+    {
+        "role": "assistant",
+        "content": "Something went wrong with my thinking engine: Connection error."
+    }
+]

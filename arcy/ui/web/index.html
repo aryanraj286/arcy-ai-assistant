@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Arcy — Gemini Chat</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+
+  <!-- Background Mesh -->
+  <div class="mesh-container">
+    <div class="mesh-gradient mesh-1"></div>
+    <div class="mesh-gradient mesh-2"></div>
+  </div>
+
+  <div class="app-layout">
+    <!-- Sidebar (Closed by default) -->
+    <aside class="app-sidebar collapsed" id="app-sidebar">
+      <div class="sidebar-header">
+        <button class="new-chat-btn" id="new-chat-btn">
+          <span class="plus-icon">+</span>
+          <span>New Chat</span>
+        </button>
+      </div>
+      <div class="sessions-list" id="sessions-list">
+        <!-- Session items will be injected here -->
+      </div>
+    </aside>
+
+    <!-- Main Content Container -->
+    <div class="main-container">
+      <!-- Header -->
+      <header class="app-header">
+        <div class="header-left">
+          <button class="sidebar-toggle" id="sidebar-toggle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 6H20M4 12H20M4 18H20" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <div class="brand dropdown-trigger">
+            <span class="sparkle-icon">✨</span>
+            <span class="arcy-name">ARCY</span>
+            <span class="dropdown-chevron">⌵</span>
+          </div>
+        </div>
+      <div class="header-actions">
+        <span class="status-indicator">SYSTEM_ONLINE</span>
+      </div>
+    </header>
+
+    <!-- Main Chat Workspace -->
+    <main class="chat-workspace">
+      
+      <!-- Greeting Hero (Only visible at start) -->
+      <div class="hero-container" id="greeting-hero">
+        <div class="mascot-wrapper">
+          <img src="mascot.png" alt="Arcy Mascot" class="mascot-img">
+        </div>
+        <h1 class="hero-title">How can I help you today?</h1>
+      </div>
+
+      <!-- Messages Thread -->
+      <div class="messages-thread" id="chat-messages">
+        <!-- Messages will be injected here -->
+      </div>
+
+    </main>
+
+    <!-- Unified Input Island -->
+    <footer class="input-island">
+      <div class="input-container">
+        <div class="input-box-wrapper">
+          <button class="add-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M12 5V19M5 12H19" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          
+          <textarea
+            id="chat-input"
+            placeholder="Chat here.."
+            rows="1"
+            autocomplete="off"
+          ></textarea>
+          
+          <button id="chat-send-btn" class="send-trigger">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <path d="M7 11L12 6L17 11M12 18V7" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+          <button class="action-btn" id="timetable-btn" data-query="Time Table">
+            <span class="action-icon">📅</span>
+            <span class="action-text">Time Table</span>
+          </button>
+          <button class="action-btn" id="payment-btn" data-query="Payment options">
+            <span class="action-icon">↗️</span>
+            <span class="action-text">Payment</span>
+          </button>
+          <button class="action-btn" id="expense-btn" data-query="Track my expense">
+            <span class="action-icon">📂</span>
+            <span class="action-text">Track your expense</span>
+          </button>
+          <button class="action-btn" id="account-btn" data-query="Account settings">
+            <span class="action-icon">👤</span>
+            <span class="action-text">Account</span>
+          </button>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="arcy.js"></script>
+</body>
+</html>

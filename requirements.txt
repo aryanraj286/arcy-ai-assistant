@@ -1,0 +1,31 @@
+# ═══════════════════════════════════════════════════════════
+# Arcy — Requirements
+# Install: pip install -r requirements.txt
+# ═══════════════════════════════════════════════════════════
+
+# ── Azure Language Service ───────────────────────────────────
+azure-ai-textanalytics>=5.3.0
+azure-core>=1.30.0
+
+# ── LLM Providers (install the one you use) ─────────────────
+openai>=1.30.0          # For OpenAI / Groq / any OpenAI-compatible API
+
+# Uncomment if using Google Gemini:
+google-generativeai>=0.7.0
+
+# ── UI ───────────────────────────────────────────────────────
+pywebview>=5.0.0             # Python ↔ HTML/JS window bridge
+
+# ── Daily Life Connectors ────────────────────────────────────
+requests>=2.31.0             # HTTP requests for weather, news APIs
+
+# ── Reminders ────────────────────────────────────────────────
+dateparser>=1.2.0            # Natural language date/time parsing
+                             # e.g. "tomorrow at 9am", "next Friday"
+
+# ── Environment / Config ─────────────────────────────────────
+python-dotenv>=1.0.0         # Load .env file
+
+# ── System Tray (optional future feature) ───────────────────
+# pystray>=0.19.4
+# Pillow>=10.0.0
